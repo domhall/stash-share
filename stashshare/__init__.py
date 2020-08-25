@@ -7,6 +7,6 @@ def save():
     return patch
 
 def apply(patch):
-    subprocess.Popen(['git', 'reset', '--hard'], stdin=subprocess.PIPE).wait()
+    subprocess.Popen(['git', 'reset', '--hard']).wait()
     p = subprocess.Popen(['git', 'apply'], stdin=subprocess.PIPE)
     p.communicate(patch)
