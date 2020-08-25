@@ -18,8 +18,9 @@ def receive_changes():
 def test_endpoint():
     r = requests.post("https://us-central1-stash-share.cloudfunctions.net/sendPatch", json =
     {
-        'test': 'hi'
+        'name': 'blue mob',
+        'patch': b'test'
     })
-    print(r.json()['test'])
+    print(r.json()['_path']['segments'][1])
 
 test_endpoint()
