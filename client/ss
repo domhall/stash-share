@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$1" == "share" ]; then
-  python3 ~/bin/share.py
+  python3 ~/bin/share.py $2
 else
-  python3 ~/bin/apply.py
+  python3 ~/bin/apply.py $2
 fi
