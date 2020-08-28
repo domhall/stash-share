@@ -17,7 +17,7 @@ exports.sendPatch = functions.https.onRequest((request, response) => {
             })
             return firestore.collection(COLLECTION).add(request.body)
                 .then(doc => {
-                    return response.status(200).send(doc.data());
+                    return response.status(200).send(doc.id);
                 }).catch(err => {
                     functions.logger.info(err);
                     return response.status(404).send({ error: 'unable to store', err });
