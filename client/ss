@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ "$1" == "share" ]; then
+  python3 ~/bin/share.py
+else
+  python3 ~/bin/apply.py
+fi
